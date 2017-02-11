@@ -8,7 +8,7 @@ ENV HOME /home/developer
 COPY sshd_config /etc/ssh/sshd_config
 COPY init-vim.sh /tmp/init-vim.sh
 
-ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
+ADD https://github.com/zckevin.keys /home/developer/.ssh/authorized_keys
 
 RUN apk add --update libseccomp openrc                                                            \
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main                 && \
