@@ -9,7 +9,7 @@ COPY sshd_config /etc/ssh/sshd_config
 COPY init-vim.sh /tmp/init-vim.sh
 
 ADD https://github.com/zckevin.keys /home/developer/.ssh/authorized_keys
-
+USER root
 RUN apk add --update libseccomp openrc                                                            \
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main                 && \
     apk add --update tmux git curl bash mosh-server htop python openssh                           \
